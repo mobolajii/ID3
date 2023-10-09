@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DecisionTree>
+  <Node attribute="NumOfProducts">
+    <IF value="1">
+      <Node attribute="Age">
+        <IF value="kleiner oder gleich 36.5">
+          <LeafNode class="0" />
+        </IF>
+        <IF value="zwischen 36.5und 55.0">
+          <Node attribute="IsActiveMember">
+            <IF value="0">
+              <Node attribute="Geography">
+                <IF value="France">
+                  <LeafNode class="0" />
+                </IF>
+                <IF value="Germany">
+                  <LeafNode class="1" />
+                </IF>
+                <IF value="Spain">
+                  <Node attribute="Balance">
+                    <IF value="zwischen 125449.05und 188173.57">
+                      <LeafNode class="0" />
+                    </IF>
+                    <IF value="mehr als 188173.57">
+                      <LeafNode class="1" />
+                    </IF>
+                    <IF value="kleiner oder gleich 62724.52">
+                      <Node attribute="Gender">
+                        <IF value="Female">
+                          <LeafNode class="1" />
+                        </IF>
+                        <IF value="Male">
+                          <Node attribute="CreditScore">
+                            <IF value="zwischen 600.0und 725.0">
+                              <Node attribute="HasCrCard">
+                                <IF value="0">
+                                  <LeafNode class="0" />
+                                </IF>
+                                <IF value="1">
+                                  <Node attribute="EstimatedSalary">
+                                    <IF value="zwischen 100002.03und 149997.26">
+                                      <Node attribute="Tenure">
+                                        <IF value="zwischen 5.0und 7.5">
+                                          <LeafNode class="0" />
+                                        </IF>
+                                        <IF value="zwischen 2.5und 5.0">
+                                          <LeafNode class="1" />
+                                        </IF>
+                                        <IF value="mehr als 7.5">
+                                          <LeafNode class="0" />
+                                        </IF>
+                                        <IF value="kleiner oder gleich 2.5">
+                                          <LeafNode class="0" />
+                                        </IF>
+                                      </Node>
+                                    </IF>
+                                    <IF value="kleiner oder gleich 50006.81">
+                                      <LeafNode class="1" />
+                                    </IF>
+                                    <IF value="mehr als 149997.26">
+                                      <LeafNode class="0" />
+                                    </IF>
+                                    <IF value="zwischen 50006.81und 100002.03">
+                                      <LeafNode class="0" />
+                                    </IF>
+                                  </Node>
+                                </IF>
+                              </Node>
+                            </IF>
+                            <IF value="kleiner oder gleich 475.0">
+                              <LeafNode class="0" />
+                            </IF>
+                            <IF value="mehr als 725.0">
+                              <LeafNode class="1" />
+                            </IF>
+                            <IF value="zwischen 475.0und 600.0">
+                              <LeafNode class="0" />
+                            </IF>
+                          </Node>
+                        </IF>
+                      </Node>
+                    </IF>
+                    <IF value="zwischen 62724.52und 125449.05">
+                      <Node attribute="Tenure">
+                        <IF value="zwischen 5.0und 7.5">
+                          <LeafNode class="0" />
+                        </IF>
+                        <IF value="zwischen 2.5und 5.0">
+                          <LeafNode class="0" />
+                        </IF>
+                        <IF value="mehr als 7.5">
+                          <Node attribute="CreditScore">
+                            <IF value="zwischen 600.0und 725.0">
+                              <Node attribute="EstimatedSalary">
+                                <IF value="zwischen 100002.03und 149997.26">
+                                  <LeafNode class="1" />
+                                </IF>
+                                <IF value="kleiner oder gleich 50006.81">
+                                  <LeafNode class="1" />
+                                </IF>
+                                <IF value="mehr als 149997.26">
+                                  <LeafNode class="0" />
+                                </IF>
+                                <IF value="zwischen 50006.81und 100002.03">
+                                  <LeafNode class="1" />
+                                </IF>
+                              </Node>
+                            </IF>
+                            <IF value="kleiner oder gleich 475.0">
+                              <LeafNode class="1" />
+                            </IF>
+                            <IF value="mehr als 725.0">
+                              <LeafNode class="0" />
+                            </IF>
+                            <IF value="zwischen 475.0und 600.0">
+                              <LeafNode class="1" />
+                            </IF>
+                          </Node>
+                        </IF>
+                        <IF value="kleiner oder gleich 2.5">
+                          <LeafNode class="0" />
+                        </IF>
+                      </Node>
+                    </IF>
+                  </Node>
+                </IF>
+              </Node>
+            </IF>
+            <IF value="1">
+              <LeafNode class="0" />
+            </IF>
+          </Node>
+        </IF>
+        <IF value="zwischen 55.0und 73.5">
+          <Node attribute="IsActiveMember">
+            <IF value="0">
+              <LeafNode class="1" />
+            </IF>
+            <IF value="1">
+              <LeafNode class="0" />
+            </IF>
+          </Node>
+        </IF>
+        <IF value="mehr als 73.5">
+          <LeafNode class="0" />
+        </IF>
+      </Node>
+    </IF>
+    <IF value="2">
+      <LeafNode class="0" />
+    </IF>
+    <IF value="3">
+      <Node attribute="Balance">
+        <IF value="zwischen 125449.05und 188173.57">
+          <LeafNode class="1" />
+        </IF>
+        <IF value="mehr als 188173.57">
+          <LeafNode class="1" />
+        </IF>
+        <IF value="kleiner oder gleich 62724.52">
+          <Node attribute="Age">
+            <IF value="kleiner oder gleich 36.5">
+              <LeafNode class="0" />
+            </IF>
+            <IF value="zwischen 36.5und 55.0">
+              <LeafNode class="1" />
+            </IF>
+            <IF value="zwischen 55.0und 73.5">
+              <LeafNode class="1" />
+            </IF>
+            <IF value="mehr als 73.5">
+              <LeafNode class="0" />
+            </IF>
+          </Node>
+        </IF>
+        <IF value="zwischen 62724.52und 125449.05">
+          <LeafNode class="1" />
+        </IF>
+      </Node>
+    </IF>
+    <IF value="4">
+      <LeafNode class="1" />
+    </IF>
+  </Node>
+</DecisionTree>
